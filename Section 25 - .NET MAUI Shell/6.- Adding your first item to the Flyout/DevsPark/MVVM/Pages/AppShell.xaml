@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell
+    x:Class="DevsPark.MVVM.Pages.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:beachAttractions="clr-namespace:DevsPark.MVVM.Pages.TropicalParadise.BeachAttractions"
+    xmlns:icyTreats="clr-namespace:DevsPark.MVVM.Pages.Frozen.IcyTreats"
+    xmlns:jungleAdventures="clr-namespace:DevsPark.MVVM.Pages.TropicalParadise.JungleAdventures"
+    xmlns:local="clr-namespace:DevsPark"
+    xmlns:nightAdventures="clr-namespace:DevsPark.MVVM.Pages.DesertMirage.NightAdventures"
+    xmlns:oasisFun="clr-namespace:DevsPark.MVVM.Pages.DesertMirage.OasisFun"
+    xmlns:snowActivities="clr-namespace:DevsPark.MVVM.Pages.Frozen.SnowActivities"
+    xmlns:utilities="clr-namespace:DevsPark.Utilities">
+
+
+    <ShellContent ContentTemplate="{DataTemplate nightAdventures:NightDuneBuggy}" />
+
+</Shell>

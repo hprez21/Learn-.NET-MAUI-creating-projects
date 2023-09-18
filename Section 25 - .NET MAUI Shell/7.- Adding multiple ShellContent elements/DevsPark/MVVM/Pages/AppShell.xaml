@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell
+    x:Class="DevsPark.MVVM.Pages.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:beachAttractions="clr-namespace:DevsPark.MVVM.Pages.TropicalParadise.BeachAttractions"
+    xmlns:icyTreats="clr-namespace:DevsPark.MVVM.Pages.Frozen.IcyTreats"
+    xmlns:jungleAdventures="clr-namespace:DevsPark.MVVM.Pages.TropicalParadise.JungleAdventures"
+    xmlns:local="clr-namespace:DevsPark"
+    xmlns:nightAdventures="clr-namespace:DevsPark.MVVM.Pages.DesertMirage.NightAdventures"
+    xmlns:oasisFun="clr-namespace:DevsPark.MVVM.Pages.DesertMirage.OasisFun"
+    xmlns:snowActivities="clr-namespace:DevsPark.MVVM.Pages.Frozen.SnowActivities"
+    xmlns:utilities="clr-namespace:DevsPark.Utilities">
+
+
+    <ShellContent ContentTemplate="{DataTemplate nightAdventures:NightDuneBuggy}" />
+    <ShellContent ContentTemplate="{DataTemplate nightAdventures:StarGazing}" />
+    <ShellContent ContentTemplate="{DataTemplate oasisFun:CamelRides}" />
+    <ShellContent ContentTemplate="{DataTemplate oasisFun:OasisPools}" />
+    <ShellContent ContentTemplate="{DataTemplate icyTreats:FrozenDrinksBar}" />
+    <ShellContent ContentTemplate="{DataTemplate icyTreats:IceCreamWorld}" />
+    <ShellContent ContentTemplate="{DataTemplate snowActivities:IceSculptures}" />
+    <ShellContent ContentTemplate="{DataTemplate snowActivities:Snowboarding}" />
+    <ShellContent ContentTemplate="{DataTemplate beachAttractions:SurfLessons}" />
+    <ShellContent ContentTemplate="{DataTemplate beachAttractions:WavePool}" />
+    <ShellContent ContentTemplate="{DataTemplate jungleAdventures:AnimalShows}" />
+    <ShellContent ContentTemplate="{DataTemplate jungleAdventures:ZipLines}" />
+
+</Shell>

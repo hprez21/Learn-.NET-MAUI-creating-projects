@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DevsPark.MVVM.Pages.FeaturedView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="FeaturedView"
+    BackgroundColor="{StaticResource BGColor}">
+
+    <Grid RowDefinitions=".2*,.8*">
+        <Label
+            FontSize="35"
+            HorizontalTextAlignment="Center"
+            Text="Explore our partners' promotions"
+            VerticalOptions="Center" />
+        <CollectionView
+            Grid.Row="1"
+            HorizontalOptions="Fill"
+            ItemsSource="{Binding Promos}"
+            SelectedItem="{Binding SelectedItem}"
+            SelectionChangedCommand="{Binding SelectionChangedCommand}"
+            SelectionMode="Single"
+            VerticalOptions="Center">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout
+                    Orientation="Vertical"
+                    Span="2"
+                    VerticalItemSpacing="50" />
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border
+                        Padding="16,8"
+                        Background="#381F8D"
+                        HeightRequest="150"
+                        HorizontalOptions="Center"
+                        Stroke="#C49B33"
+                        StrokeShape="RoundRectangle 10,10,10,10"
+                        StrokeThickness="3"
+                        WidthRequest="150">
+                        <Grid RowDefinitions="*,*">
+                            <Image Source="{Binding Image}" VerticalOptions="Center" />
+                            <Label
+                                Grid.Row="1"
+                                FontAttributes="Bold"
+                                HorizontalTextAlignment="Center"
+                                Text="{Binding BusinessName}"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                        </Grid>
+                    </Border>
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+    </Grid>
+</ContentPage>

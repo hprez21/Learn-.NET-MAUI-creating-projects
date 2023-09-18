@@ -1,0 +1,8 @@
+xmlns:beachAttractions="clr-namespace:DevsPark.MVVM.Pages.TropicalParadise.BeachAttractions"
+xmlns:icyTreats="clr-namespace:DevsPark.MVVM.Pages.Frozen.IcyTreats"
+xmlns:jungleAdventures="clr-namespace:DevsPark.MVVM.Pages.TropicalParadise.JungleAdventures"
+xmlns:local="clr-namespace:DevsPark"
+xmlns:nightAdventures="clr-namespace:DevsPark.MVVM.Pages.DesertMirage.NightAdventures"
+xmlns:oasisFun="clr-namespace:DevsPark.MVVM.Pages.DesertMirage.OasisFun"
+xmlns:snowActivities="clr-namespace:DevsPark.MVVM.Pages.Frozen.SnowActivities"
+xmlns:utilities="clr-namespace:DevsPark.Utilities"

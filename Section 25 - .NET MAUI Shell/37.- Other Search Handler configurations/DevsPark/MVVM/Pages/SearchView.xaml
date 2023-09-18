@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DevsPark.MVVM.Pages.SearchView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:search="clr-namespace:DevsPark.Search"
+    Title="SearchView">
+
+    <Shell.SearchHandler>
+        <search:OffersSearchHandler
+            DisplayMemberName="OfferName"
+            Keyboard="Chat"
+            Placeholder="Search offers"
+            SearchBoxVisibility="Collapsible"
+            ShowsResults="True">
+
+            <SearchHandler.Keyboard>
+                <Keyboard x:FactoryMethod="Create">
+                    <x:Arguments>
+                        <KeyboardFlags>CapitalizeWord</KeyboardFlags>
+                    </x:Arguments>
+                </Keyboard>
+            </SearchHandler.Keyboard>
+
+            <search:OffersSearchHandler.ItemTemplate>
+                <DataTemplate>
+                    <Grid ColumnDefinitions=".3*,.7*" RowDefinitions="*,5">
+                        <Image Source="{Binding Image}" />
+                        <Label
+                            Grid.Column="1"
+                            FontSize="14"
+                            HorizontalOptions="Center"
+                            Text="{Binding OfferName}"
+                            VerticalOptions="Center" />
+                        <Rectangle
+                            Grid.Row="1"
+                            Grid.ColumnSpan="2"
+                            Fill="#E0E0E0" />
+                    </Grid>
+                </DataTemplate>
+            </search:OffersSearchHandler.ItemTemplate>
+
+        </search:OffersSearchHandler>
+
+    </Shell.SearchHandler>
+
+</ContentPage>    

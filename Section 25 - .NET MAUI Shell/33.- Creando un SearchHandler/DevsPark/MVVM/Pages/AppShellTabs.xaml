@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell
+    x:Class="DevsPark.MVVM.Pages.AppShellTabs"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:beachAttractions="clr-namespace:DevsPark.MVVM.Pages.TropicalParadise.BeachAttractions"
+    xmlns:icyTreats="clr-namespace:DevsPark.MVVM.Pages.Frozen.IcyTreats"
+    xmlns:jungleAdventures="clr-namespace:DevsPark.MVVM.Pages.TropicalParadise.JungleAdventures"
+    xmlns:local="clr-namespace:DevsPark"
+    xmlns:nightAdventures="clr-namespace:DevsPark.MVVM.Pages.DesertMirage.NightAdventures"
+    xmlns:oasisFun="clr-namespace:DevsPark.MVVM.Pages.DesertMirage.OasisFun"
+    xmlns:snowActivities="clr-namespace:DevsPark.MVVM.Pages.Frozen.SnowActivities"
+    xmlns:utilities="clr-namespace:DevsPark.Utilities">
+
+    <Shell.Resources>
+        <Style TargetType="TabBar">
+            <Setter Property="Shell.TabBarBackgroundColor" Value="#1D1F24" />
+            <Setter Property="Shell.TabBarDisabledColor" Value="#1D1F24" />
+            <Setter Property="Shell.TabBarForegroundColor" Value="Yellow" />
+            <Setter Property="Shell.TabBarTitleColor" Value="#9E86FF" />
+            <Setter Property="Shell.TabBarUnselectedColor" Value="#555A62" />
+        </Style>
+    </Shell.Resources>
+
+
+    <TabBar Title="Desert Mirage">
+        <Tab Title="Night Adventures">
+            <Tab.Icon>
+                <FontImageSource
+                    FontFamily="Icons"
+                    Glyph="{x:Static utilities:IconFont.Night_adventures}"
+                    Color="{StaticResource IconColor}" />
+            </Tab.Icon>
+            <ShellContent Title="Night Dune Buggy" ContentTemplate="{DataTemplate nightAdventures:NightDuneBuggy}">
+                <ShellContent.Icon>
+                    <FontImageSource
+                        FontFamily="Icons"
+                        Glyph="{x:Static utilities:IconFont.Night_dune_buggy}"
+                        Color="{StaticResource IconColor}" />
+                </ShellContent.Icon>
+            </ShellContent>
+            <ShellContent Title="Star Gazing" ContentTemplate="{DataTemplate nightAdventures:StarGazing}">
+                <ShellContent.Icon>
+                    <FontImageSource
+                        FontFamily="Icons"
+                        Glyph="{x:Static utilities:IconFont.Star_gazing}"
+                        Color="{StaticResource IconColor}" />
+                </ShellContent.Icon>
+            </ShellContent>
+        </Tab>
+
+        <Tab Title="Oasis Fun">
+            <Tab.Icon>
+                <FontImageSource
+                    FontFamily="Icons"
+                    Glyph="{x:Static utilities:IconFont.Oasis_fun}"
+                    Color="{StaticResource IconColor}" />
+            </Tab.Icon>
+            <ShellContent Title="Camel Rides" ContentTemplate="{DataTemplate oasisFun:CamelRides}">
+                <ShellContent.Icon>
+                    <FontImageSource
+                        FontFamily="Icons"
+                        Glyph="{x:Static utilities:IconFont.Camel_rides}"
+                        Color="{StaticResource IconColor}" />
+                </ShellContent.Icon>
+            </ShellContent>
+            <ShellContent Title="Oasis Pools" ContentTemplate="{DataTemplate oasisFun:OasisPools}">
+                <ShellContent.Icon>
+                    <FontImageSource
+                        FontFamily="Icons"
+                        Glyph="{x:Static utilities:IconFont.Oasis_pools}"
+                        Color="{StaticResource IconColor}" />
+                </ShellContent.Icon>
+            </ShellContent>
+        </Tab>
+
+        <Tab Title="Icy Treats">
+            <Tab.Icon>
+                <FontImageSource
+                    FontFamily="Icons"
+                    Glyph="{x:Static utilities:IconFont.Icy_treats}"
+                    Color="{StaticResource IconColor}" />
+            </Tab.Icon>
+            <ShellContent Title="Frozen Drinks" ContentTemplate="{DataTemplate icyTreats:FrozenDrinksBar}">
+                <ShellContent.Icon>
+                    <FontImageSource
+                        FontFamily="Icons"
+                        Glyph="{x:Static utilities:IconFont.Frozen_drinks_bar}"
+                        Color="{StaticResource IconColor}" />
+                </ShellContent.Icon>
+            </ShellContent>
+            <ShellContent Title="Ice Cream World" ContentTemplate="{DataTemplate icyTreats:IceCreamWorld}">
+                <ShellContent.Icon>
+                    <FontImageSource
+                        FontFamily="Icons"
+                        Glyph="{x:Static utilities:IconFont.Ice_cream_world}"
+                        Color="{StaticResource IconColor}" />
+                </ShellContent.Icon>
+            </ShellContent>
+        </Tab>
+        <Tab Title="Snow Activities">
+            <Tab.Icon>
+                <FontImageSource
+                    FontFamily="Icons"
+                    Glyph="{x:Static utilities:IconFont.Snow_activities}"
+                    Color="{StaticResource IconColor}" />
+            </Tab.Icon>
+            <ShellContent Title="Ice Sculptures" ContentTemplate="{DataTemplate snowActivities:IceSculptures}">
+                <ShellContent.Icon>
+                    <FontImageSource
+                        FontFamily="Icons"
+                        Glyph="{x:Static utilities:IconFont.Ice_sculptures}"
+                        Color="{StaticResource IconColor}" />
+                </ShellContent.Icon>
+            </ShellContent>
+            <ShellContent Title="Snowboarding" ContentTemplate="{DataTemplate snowActivities:Snowboarding}">
+                <ShellContent.Icon>
+                    <FontImageSource
+                        FontFamily="Icons"
+                        Glyph="{x:Static utilities:IconFont.Snowboarding}"
+                        Color="{StaticResource IconColor}" />
+                </ShellContent.Icon>
+            </ShellContent>
+        </Tab>
+
+        <Tab Title="Beach Attractions">
+            <Tab.Icon>
+                <FontImageSource
+                    FontFamily="Icons"
+                    Glyph="{x:Static utilities:IconFont.Beach_attractions}"
+                    Color="{StaticResource IconColor}" />
+            </Tab.Icon>
+            <ShellContent Title="Surf Lessons" ContentTemplate="{DataTemplate beachAttractions:SurfLessons}">
+                <ShellContent.Icon>
+                    <FontImageSource
+                        FontFamily="Icons"
+                        Glyph="{x:Static utilities:IconFont.Surf_lessons}"
+                        Color="{StaticResource IconColor}" />
+                </ShellContent.Icon>
+            </ShellContent>
+            <ShellContent Title="Wave Pool" ContentTemplate="{DataTemplate beachAttractions:WavePool}">
+                <ShellContent.Icon>
+                    <FontImageSource
+                        FontFamily="Icons"
+                        Glyph="{x:Static utilities:IconFont.Wave_pool}"
+                        Color="{StaticResource IconColor}" />
+                </ShellContent.Icon>
+            </ShellContent>
+        </Tab>
+
+        <Tab Title="Jungle Adventures">
+            <Tab.Icon>
+                <FontImageSource
+                    FontFamily="Icons"
+                    Glyph="{x:Static utilities:IconFont.Jungle_adventures}"
+                    Color="{StaticResource IconColor}" />
+            </Tab.Icon>
+            <ShellContent Title="Animal Shows" ContentTemplate="{DataTemplate jungleAdventures:AnimalShows}">
+                <ShellContent.Icon>
+                    <FontImageSource
+                        FontFamily="Icons"
+                        Glyph="{x:Static utilities:IconFont.Animal_shows}"
+                        Color="{StaticResource IconColor}" />
+                </ShellContent.Icon>
+            </ShellContent>
+            <ShellContent Title="Zip Lines" ContentTemplate="{DataTemplate jungleAdventures:ZipLines}">
+                <ShellContent.Icon>
+                    <FontImageSource
+                        FontFamily="Icons"
+                        Glyph="{x:Static utilities:IconFont.Zip_lines}"
+                        Color="{StaticResource IconColor}" />
+                </ShellContent.Icon>
+            </ShellContent>
+        </Tab>
+
+
+    </TabBar>
+</Shell>

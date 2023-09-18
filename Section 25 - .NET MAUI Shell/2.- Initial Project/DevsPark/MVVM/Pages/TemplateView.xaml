@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView
+    x:Class="DevsPark.MVVM.Pages.TemplateView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="#370053">
+
+    <Grid RowDefinitions=".4*,.6*">
+        <Grid>
+            <Image Aspect="AspectFill" Source="{Binding CurrentPlace.ImagePath}" />
+            <Rectangle Fill="Black" Opacity=".4" />
+        </Grid>
+        <VerticalStackLayout
+            Grid.Row="1"
+            Margin="0,-100,0,0"
+            Padding="20,0,20,0">
+            <Label
+                FontAttributes="Bold"
+                FontSize="40"
+                Text="{Binding CurrentPlace.Name}"
+                TextColor="White" />
+            <Border
+                Background="White"
+                HorizontalOptions="Center"
+                Stroke="#D6D6D6"
+                StrokeShape="RoundRectangle 5,5,20,20"
+                StrokeThickness="4">
+                <VerticalStackLayout Padding="20,50">
+                    <Label FontSize="20" Text="{Binding CurrentPlace.Name, StringFormat='About {0}'}" />
+                    <Label
+                        Padding="0,20,0,0"
+                        FontSize="16"
+                        Text="{Binding CurrentPlace.Description}"
+                        TextColor="#6D6D6D" />
+                </VerticalStackLayout>
+            </Border>
+        </VerticalStackLayout>
+    </Grid>
+
+</ContentView>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DevsPark.MVVM.Pages.OffersView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:utilities="clr-namespace:DevsPark.Utilities"
+    Title="OffersView">
+
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior Command="{Binding BackCommand}">
+            <BackButtonBehavior.IconOverride>
+                <FontImageSource
+                    FontFamily="Icons"
+                    Glyph="{x:Static utilities:IconFont.Back}"
+                    Color="{StaticResource IconColor}" />
+            </BackButtonBehavior.IconOverride>
+        </BackButtonBehavior>
+    </Shell.BackButtonBehavior>
+
+    <Grid RowDefinitions=".1*,.9*">
+        <Label
+            FontAttributes="Bold"
+            FontSize="25"
+            HorizontalOptions="Center"
+            Text="{Binding CompanyName, StringFormat='{0} offers'}"
+            VerticalOptions="Center" />
+
+        <CollectionView Grid.Row="1" ItemsSource="{Binding Offers}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border
+                        Background="#2B0B98"
+                        Stroke="#C49B33"
+                        StrokeShape="RoundRectangle 20,0,0,20"
+                        StrokeThickness="4">
+                        <Grid ColumnDefinitions=".3*,.7*" RowDefinitions="*,*">
+                            <Image Grid.RowSpan="2" Source="{Binding Image}" />
+                            <Label
+                                Grid.Column="1"
+                                FontSize="25"
+                                HorizontalOptions="Center"
+                                Text="{Binding Discount, StringFormat='{0}%'}"
+                                TextColor="White"
+                                VerticalOptions="Center" />
+                            <Label
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                FontSize="15"
+                                HorizontalOptions="Center"
+                                Text="{Binding Description}"
+                                TextColor="LightGray" />
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </Grid>
+</ContentPage>
